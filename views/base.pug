@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-width=1")
+
+    block title
+      title GudHub Page
+
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css")
+    script(src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js")
+  
+  body
+    nav.uk-navbar-container(uk-navbar)
+      div.uk-navbar-left
+        a.uk-navbar-item.uk-logo(href="/") GudHub
+
+        form.uk-search.uk-search-default
+          span.uk-search-icon-flip(uk-search-icon)
+          input.uk-search-input(type="search", placeholder="Search or jump to...")
+        
+        ul.uk-navbar-nav
+          li
+            a(href="#") Pull requests
+          li
+            a(href="#") Issues
+          li
+            a(href="#") Marketplace
+          li
+            a(href="#") Explore
+      
+      div.uk-nabar-right
+        ul.uk-navbar-nav
+          li
+            a(href="#", uk-icon="bell")
+          li
+            a(href="#", uk-icon="plus")
+          li
+            a(href="#", uk-icon="sign-in")
+    
+    div.uk-container.uk-margin-top
+      block content
+        div.uk-placeholder
+          p.uk-text-center Nothing here yet!
