@@ -6,6 +6,10 @@ html
 
     block title
       title GudHub Page
+    
+    link(rel="icon", type="image/svg+xml", href="/img/gh-alt.svg")
+    link(rel="alternate icon", href="/img/gh-alt.ico")
+    link(rel="mask-icon", href="/img/gh-alt.svg", color="#666666")
 
     link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css")
     script(src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js")
@@ -14,7 +18,9 @@ html
   body
     nav.uk-navbar-container(uk-navbar)
       div.uk-navbar-left
-        a.uk-navbar-item.uk-logo(href="/") GudHub
+        a.uk-navbar-item.uk-logo(href="/")
+          span.uk-icon(uk-icon="icon: github-alt; ratio: 2")
+          span GudHub
 
         form.uk-search.uk-search-default
           span.uk-search-icon-flip(uk-search-icon)
@@ -39,7 +45,8 @@ html
           li
             a(href="#", uk-icon="sign-in")
     
-    div.uk-container.uk-margin-top
-      block content
-        div.uk-placeholder
-          p.uk-text-center Nothing here yet!
+    block raw-content
+      div.uk-container.uk-margin-top
+        block content
+          div.uk-placeholder
+            p.uk-text-center Nothing here yet!
