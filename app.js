@@ -25,6 +25,17 @@ app.get("/:user/:repo", function (req, res) {
   });
 });
 
+// Codeview
+app.get("/:user/:repo/blob/:branch/:file", function (req, res) {
+  console.log("[DEBUG] Codeview " + req.params.user + "/" + req.params.repo + ": " + req.params.file);
+  res.render("codeview", {
+    user: req.params.user,
+    repo: req.params.repo,
+    branch: req.params.branch,
+    file: req.params.branch
+  });
+});
+
 app.listen(port, () => {
   console.log("Server is running")
 });
