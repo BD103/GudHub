@@ -1,0 +1,22 @@
+extends base.pug
+
+block content
+  ul.uk-subnav
+    li.uk-active
+      a(href="#") Code
+    li
+      a(href="#") Issues
+    li
+      a(href="#") Pull requests
+    li.uk-disabled
+      a Actions
+    li
+      a(href="#") Wiki
+    li
+      a(href="#") Security
+    li.uk-disabled
+      a Insights
+
+  block repo-content
+    div.uk-placeholder
+      p.uk-text-center Nothing here yet!
