@@ -26,6 +26,7 @@
   "homepage": "https://github.com/BD103/GudHub",
   "dependencies": {
     "express": "^4.17.1",
+    "highlight.js": "^11.2.0",
     "pug": "^3.0.2"
   },
   "devDependencies": {}
