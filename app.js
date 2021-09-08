@@ -1,5 +1,6 @@
 const express = require("express");
 const pug = require("pug");
+const hljs = require("highlight.js");
 const app = express();
 const port = 8000;
 
@@ -32,7 +33,10 @@ app.get("/:user/:repo/blob/:branch/:file", function (req, res) {
     user: req.params.user,
     repo: req.params.repo,
     branch: req.params.branch,
-    file: req.params.branch
+    file: {
+      name: req.params.file,
+      content: hljs.highlightAuto("if True:\n\tprint('this is a test statement')").value
+    }
   });
 });
 

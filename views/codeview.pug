@@ -1,1 +1,8 @@
 extends templates/repo.pug
+
+block title
+  title #{repo}/#{file.name} at #{branch}
+
+block repo-content
+  pre
+    code!= file.content
